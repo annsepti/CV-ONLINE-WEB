@@ -51,7 +51,7 @@ public class DeleteBahasa extends HttpServlet {
             String message = "gagal hapus";
             if(ic.delete(bahasa))message="sukses dihapus";
             sessio.setAttribute("pesan", message);
-            dis = request.getRequestDispatcher("/views/bahasa.jsp");
+            dis = request.getRequestDispatcher("./bahasa");
             dis.forward(request, response);
         }
     }
