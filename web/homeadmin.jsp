@@ -269,9 +269,9 @@
             <div class="content mt-3">
                 <% String klik = request.getParameter("id");
                     if (klik.equals("1")){
-                %><%@include file="/views/lihatbahasa.jsp" %>
+                %><%@include file="/views/lihatBahasa.jsp" %>
                 <%} else if(klik.equals("2")) {%>
-                <jsp:include page="/bahasas"/>
+                <jsp:include page="/bahasa"/>
                 <% } %>
             </div>
 

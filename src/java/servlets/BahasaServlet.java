@@ -45,7 +45,6 @@ public class BahasaServlet extends HttpServlet {
         RequestDispatcher dis = null;
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<font color=\"red\">nyoba direct</font>");
             InterfaceController<Bahasa> ic = new GeneralController<Bahasa>(HibernateUtil.getSessionFactory(),Bahasa.class);
             session.setAttribute("dataBahasa",ic.getAll());
             dis=request.getRequestDispatcher("/views/lihatBahasa.jsp");

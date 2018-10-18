@@ -26,10 +26,10 @@
                 </div>
                 <div class="card-body">
                     <table id="bootstrap-data-table" class="table table-striped table-bordered">
-                        <thead class="thead-dark">
+                        <thead>
                             <tr>
-                                <th scope="col" width="50%"> EDIT </th>
-                                <th scope="col" width="50%"> NAMA </th>
+                                <th scope="col" width="100px"> EDIT </th>
+                                <th scope="col" width="100px"> NAMA </th>
                                 <th scope="col" width="50%"> SPEAKING </th>
                                 <th scope="col" width="50%"> READING </th>
                                 <th scope="col" width="50%"> WRITING </th>
@@ -39,19 +39,20 @@
                             <% for (Bahasa bahasa : datas) {%> 
                             <tr>
                                 <td><a class="menu-icon fa fa-edit" href="./editBahasa?id=<%= bahasa.getIdBahasa()%>"></a> |
-                                    <a class="menu-icon fa fa-trash" href="./deleteBahasa?id=<%= bahasa.getIdBahasa()%>"></a></td>
-                                <td><%= bahasa.getNamaBahasa()%></td>
-                                <td><%= bahasa.getSpeaking()%></td>
-                                <td><%= bahasa.getReading()%></td>
-                                <td><%= bahasa.getWriting()%></td>
-                            </tr>
-                            <% }%>
+                                    <a class="menu-icon fa fa-trash" href="./deleteBahasa?id=<%= bahasa.getIdBahasa()%>"></a> |
+                                    <button type="button" class="btn btn-secondary mb-1" data-toggle="modal" data-target="#mediumModal">Details</button></td>
+                        <td><%= bahasa.getNamaBahasa()%></td>
+                        <td><%= bahasa.getSpeaking()%></td>
+                        <td><%= bahasa.getReading()%></td>
+                        <td><%= bahasa.getWriting()%></td>
+                        </tr>
+                        <% }%>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-         <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
